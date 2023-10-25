@@ -1,3 +1,4 @@
+// When task is completed.
 document.addEventListener("DOMContentLoaded", ()=> {
     let tasks = document.querySelectorAll('.task');
     tasks.forEach(task => {
