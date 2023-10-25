@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;600&family=Poppins:wght@400;600&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+:root {
+    --main-color: #FF5757;
+    --secondary-color: #8C52FF;
+    --green: #00BF63;
+    --red: #FF3131;
+    --blue: #5E17EB;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, var(--main-color), var(--secondary-color));
+    color: white;
+    font-family: poppins, sans-serif;
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+}
+#wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.1rem;
+}
+.personal {
+    color: var(--blue);
+}
+.work {
+    color: var(--red)
+}
+.logo {
+    font-weight: 600;
+}
+.logo a{
+    color: inherit;
+    text-decoration: none;
+}
+.logo a:hover {
+    color: var(--blue);
+}
+.btn {
+    padding: .8rem 2rem;
+    /* font-size: inherit; */
+    text-transform: capitalize;
+}
+.btn.add-task {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    opacity: .8;
+}
+/* === Main === */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    margin: 1rem 0;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+h2 {
+    font-size: 1.2rem;
+    color: var(--blue);
+    text-align: center;
+    margin: .5rem auto 1rem;
+    font-weight: bold;
+}
+.task-container {
+    margin: 0 0 2rem;
+}
+.task-name {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* .container {} */
+ul {
+    list-style: none;
+    background-color: rgba(255, 255, 255, 1);
+    padding: .5rem;
+    border-radius: 5px;
+    width: 100%;
+}
+li {
+    background-color: rgb(240, 230, 240);
+    color: #30303d;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: 400ms;
+}
+.completed {
+    background-color: rgba(86, 73, 86, 0.5);
+    color: gray;
+}
+
+li p {
+    display: block;
+    padding: 1rem;
+}
+.task .icon {
+    display: block;
+}
+.icon i  {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    transition: .5s;
+    cursor: pointer;
+    color: rgb(71, 75, 71)
+}
+.icon:hover i {
+    color: green;
+}
+.icon i.checked {
+    color: var(--green);
+}
+/* ==== Add task form ==== */
+.form-title {
+    text-align: center;
+}
+.new-task form {
+    display: flex;
+    flex-direction: column;
+}
+.new-task {
+    width: 100%;
+    max-width: 500px;
+    min-height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input, select, textarea {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: .75rem .8rem;
+    
+}
+
+input, select {
+    border: none;
+    font-size: 1.1rem;
+}
+label {
+    margin-bottom: .5rem;
+    color:rgb(237, 231, 237);
+    font-weight: bold;
+}
+textarea {
+    resize: vertical;
+    font-size: 1rem;
+}
+footer {
+    font-size: .8rem;
+    color: #ccc;
+    text-align: right;
+}
+@media screen And (min-width: 820px) {
+    body {
+        font-size: 1rem;
+    }
+    header {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 2.8rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+        margin: 0 0 1rem
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    #wrapper {
+        padding: 2rem 2rem 1rem;
+    }
+    .container {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .task-container {
+        padding: 1rem;
+    }
+    input, select {
+        font-size: 1.2rem;
+    }
+    
+}
